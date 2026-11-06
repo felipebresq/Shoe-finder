@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Find the aisle for your favourite shoe brands.">
+  <title>ShoeFinder | Aisle Locator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="ShoeFinder home">
+      <span class="brand-mark">S</span>
+      <span>ShoeFinder</span>
+    </a>
+    <a class="admin-link" href="admin.html">Admin</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro">
+      <p class="eyebrow">STORE AISLE LOCATOR</p>
+      <h1>Find your brand.<br><span>Find your aisle.</span></h1>
+      <p class="intro-copy">Search for a shoe brand to see exactly where to go.</p>
+    </section>
+
+    <section class="finder-card" aria-label="Brand finder">
+      <label for="brand-search">Which brand are you looking for?</label>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="brand-search" type="text" placeholder="Start typing a brand..." autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="brand-options">
+        <button id="clear-search" class="clear-button" type="button" aria-label="Clear search" hidden>×</button>
+        <ul id="brand-options" class="suggestions" role="listbox" hidden></ul>
+      </div>
+      <p class="hint">Type a few letters or choose from the list.</p>
+
+      <div id="location-result" class="location-result" aria-live="polite">
+        <div class="result-placeholder">
+          <span class="pin-icon">⌖</span>
+          <strong>Your aisle will appear here</strong>
+          <span>Select a brand to get started.</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer-note">Quick, simple, and easy to use.</p>
+  </main>
+  <footer><span>SHOEFINDER</span><span>Find it faster.</span></footer>
+</body>
+</html>
